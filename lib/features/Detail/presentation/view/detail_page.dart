@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant.dart';
+import 'package:furniture_app/features/Detail/presentation/view/widget/detail_appbar.dart';
+import 'package:furniture_app/features/Detail/presentation/view/widget/detail_item.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -6,16 +9,13 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Icon(
-                Icons.arrow_back,
-              ),
-            ],
-          )
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            DetailAppBar(),
+            DetailItem(),
+          ],
+        ),
       ),
     );
   }
