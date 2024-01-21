@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/constant.dart';
+import 'package:furniture_app/core/utils/Styles.dart';
+import 'package:furniture_app/features/Detail/presentation/view/widget/color_List.dart';
 import 'package:furniture_app/features/Detail/presentation/view/widget/detail_appbar.dart';
 import 'package:furniture_app/features/Detail/presentation/view/widget/detail_item.dart';
 import 'package:furniture_app/features/Detail/presentation/view/widget/detail_text.dart';
+import 'package:furniture_app/features/Detail/presentation/view/widget/pay_card.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -13,10 +17,39 @@ class DetailPage extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 6, horizontal: 16),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DetailAppBar(),
+              SizedBox(
+                height: 16,
+              ),
               DetailItem(),
+              SizedBox(
+                height: 12,
+              ),
               DetailText(),
+              SizedBox(
+                height: 8,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Color',
+                    style: Styles.textStyle26,
+                  ),
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 16, top: 12),
+                child: ColorsList(),
+              ),
+              Spacer(
+                flex: 1,
+              ),
+              PayCard(),
+              Spacer(
+                flex: 2,
+              ),
             ],
           ),
         ),
