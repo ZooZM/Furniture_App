@@ -6,11 +6,15 @@ class DetailAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ListTile(
-      leading: Icon(
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      onTap: () {
+        Navigator.of(context).pop();
+      },
+      leading: const Icon(
         Icons.arrow_back_ios,
       ),
-      title: Text(
+      title: const Text(
         'Boogly chair',
         style: Styles.textStyle20,
       ),
