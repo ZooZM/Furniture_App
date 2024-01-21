@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 import 'package:furniture_app/features/Home/presentation/view/widget/category_listview.dart';
-import 'package:furniture_app/features/Home/presentation/view/widget/Home_App_Bar.dart';
-import 'package:furniture_app/features/Home/presentation/view/widget/Home_Text_Field.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/home_app_bar.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/home_text_field.dart';
 import 'package:furniture_app/features/Home/presentation/view/widget/popular_item.dart';
 
 class HomeViewBody extends StatelessWidget {
