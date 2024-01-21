@@ -2,20 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 
-class CategoryListView extends StatelessWidget {
-  const CategoryListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        CategoryCard(
-            image: 'assets/images/table2.png', text: 'table', onPress: false),
-      ],
-    );
-  }
-}
-
 class CategoryCard extends StatelessWidget {
   const CategoryCard(
       {super.key,

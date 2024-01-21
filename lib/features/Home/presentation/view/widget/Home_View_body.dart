@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
-import 'package:furniture_app/features/Home/presentation/view/widget/Category_Card.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/category_listview.dart';
 import 'package:furniture_app/features/Home/presentation/view/widget/Home_App_Bar.dart';
 import 'package:furniture_app/features/Home/presentation/view/widget/Home_Text_Field.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/popular_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -25,7 +25,15 @@ class HomeViewBody extends StatelessWidget {
             'Categories',
             style: Styles.textStyle20,
           ),
-          CategoryListView(),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            child: CategoryListView(),
+          ),
+          Text(
+            'Popular',
+            style: Styles.textStyle20,
+          ),
+          PopularItem(),
         ],
       ),
     );
