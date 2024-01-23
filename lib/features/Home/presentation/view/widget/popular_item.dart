@@ -3,8 +3,16 @@ import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 
 class PopularItem extends StatelessWidget {
-  const PopularItem({super.key});
-
+  const PopularItem(
+      {super.key,
+      required this.image,
+      required this.name,
+      required this.price,
+      required this.rate});
+  final String image;
+  final String name;
+  final double price;
+  final double rate;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -12,17 +20,18 @@ class PopularItem extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(
-            'assets/images/1.png',
+            image,
             alignment: Alignment.center,
+            height: 150,
           ),
           const SizedBox(
             height: 8,
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                'Boogly Chair',
+                name,
                 style: Styles.textStyle16,
               ),
             ],
@@ -30,7 +39,7 @@ class PopularItem extends StatelessWidget {
           Row(
             children: [
               Text(
-                '191',
+                price.toString(),
                 style: TextStyle(
                   color: korange,
                 ),
@@ -40,7 +49,7 @@ class PopularItem extends StatelessWidget {
                 Icons.star_rate,
                 color: Colors.yellow,
               ),
-              const Text('4.0'),
+              Text(rate.toString()),
             ],
           )
         ],
