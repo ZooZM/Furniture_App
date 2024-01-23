@@ -1,6 +1,3 @@
-import 'package:furniture_app/features/Home/presentation/view%20Model/category_model.dart';
-import 'package:furniture_app/features/Home/presentation/view%20Model/item_Model.dart';
-
 const String chair1 = 'assets/images/chair.png';
 const String chair2 = 'assets/images/chair2.png';
 const String armchair1 = 'assets/images/armchair.png';
@@ -20,24 +17,4 @@ List<String> onBoardList = const [
   p3,
   p4,
   p5,
-];
-List<ItemModel> poplist = [
-  ItemModel(
-    name: 'Boogly Vhair',
-    rate: 4.0,
-    price: 199,
-    image: p1,
-  ),
-  ItemModel(
-    name: 'Bromely Chair',
-    rate: 4.1,
-    price: 201,
-    image: p6,
-  ),
-  ItemModel(
-    name: 'Modern Chair',
-    rate: 5.0,
-    price: 299,
-    image: p2,
-  )
 ];

@@ -12,6 +12,8 @@ const String table2 = 'assets/images/table2.png';
 const String p1 = 'assets/images/1.png';
 const String p2 = 'assets/images/2.png';
 const String p6 = 'assets/images/6.png';
+const String subtitle =
+    'this chair is very comfortable and modern you can put it and give your living rom the best look ever when you sit on it you will know.';
 
 List<CategoryModel> categoryList = const [
   CategoryModel(
@@ -41,17 +43,20 @@ List<ItemModel> poplist = [
     rate: 4.0,
     price: 199,
     image: p1,
+    subtitle: subtitle,
   ),
   ItemModel(
     name: 'Bromely Chair',
     rate: 4.1,
     price: 201,
     image: p6,
+    subtitle: subtitle,
   ),
   ItemModel(
     name: 'Modern Chair',
     rate: 5.0,
     price: 299,
     image: p2,
+    subtitle: subtitle,
   )
 ];

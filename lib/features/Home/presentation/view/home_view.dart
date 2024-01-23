@@ -4,6 +4,7 @@ import 'package:furniture_app/features/Home/presentation/view/widget/home_view_b
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
+  final String id = 'Home_Page';
 
   @override
   Widget build(BuildContext context) {

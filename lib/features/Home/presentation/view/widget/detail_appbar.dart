@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 
 class DetailAppBar extends StatelessWidget {
-  const DetailAppBar({super.key});
-
+  const DetailAppBar({super.key, required this.name});
+  final String name;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -14,8 +14,8 @@ class DetailAppBar extends StatelessWidget {
       leading: const Icon(
         Icons.arrow_back_ios,
       ),
-      title: const Text(
-        'Boogly chair',
+      title: Text(
+        name,
         style: Styles.textStyle20,
       ),
     );

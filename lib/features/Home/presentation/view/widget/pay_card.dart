@@ -3,32 +3,32 @@ import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 
 class PayCard extends StatelessWidget {
-  const PayCard({super.key});
-
+  const PayCard({super.key, required this.price});
+  final String price;
   @override
   Widget build(BuildContext context) {
     return Card(
       color: korange,
-      child: const SizedBox(
+      child: SizedBox(
         height: 60,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
-            Text(
+            const Text(
               'Add to Cart',
               style: Styles.textStyle18,
             ),
-            Spacer(
+            const Spacer(
               flex: 3,
             ),
             Text(
-              '191',
+              price,
               style: Styles.textStyle18,
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
           ],
