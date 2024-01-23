@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/color_List.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/detail_appbar.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/detail_item.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/detail_text.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/pay_card.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/color_list.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/detail_appbar.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/detail_item.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/detail_text.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/pay_card.dart';
 
 class DetailViewBody extends StatelessWidget {
   const DetailViewBody({super.key});

@@ -27,3 +27,13 @@ List<CategoryModel> categoryWhite = const [
   CategoryModel(name: 'bed', path: bed1),
   CategoryModel(name: 'table', path: table1)
 ];
+List<String> onBoardList = const [
+  p3,
+  p4,
+  p5,
+];
+List<String> poplist = const [
+  p1,
+  p2,
+  p6,
+];

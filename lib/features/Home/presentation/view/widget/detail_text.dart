@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
-import 'package:furniture_app/features/Detail/presentation/view/widget/item_rate.dart';
+import 'package:furniture_app/features/Home/presentation/view/widget/item_rate.dart';
 
 class DetailText extends StatelessWidget {
   const DetailText({super.key});
