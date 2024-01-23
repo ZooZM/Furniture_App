@@ -16,18 +16,6 @@ const String p4 = 'assets/images/4.png';
 const String p5 = 'assets/images/5.png';
 const String p6 = 'assets/images/6.png';
 
-List<CategoryModel> categoryBlack = const [
-  CategoryModel(name: 'chair', path: chair2),
-  CategoryModel(name: 'armchair', path: armchair2),
-  CategoryModel(name: 'bed', path: bed2),
-  CategoryModel(name: 'table', path: table2)
-];
-List<CategoryModel> categoryWhite = const [
-  CategoryModel(name: 'chair', path: chair1),
-  CategoryModel(name: 'armchair', path: armchair1),
-  CategoryModel(name: 'bed', path: bed1),
-  CategoryModel(name: 'table', path: table1)
-];
 List<String> onBoardList = const [
   p3,
   p4,

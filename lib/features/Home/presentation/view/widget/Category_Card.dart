@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
+import 'package:furniture_app/features/Home/presentation/view%20Model/category_model.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard(
-      {super.key,
-      required this.image,
-      required this.text,
-      required this.onPress});
-  final String image;
-  final String text;
+  const CategoryCard({
+    super.key,
+    required this.onPress,
+    required this.model,
+  });
+  final CategoryModel model;
   final bool onPress;
   @override
   Widget build(BuildContext context) {
@@ -28,16 +28,17 @@ class CategoryCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Image.asset(
-                    image,
+                    onPress ? model.imageWhite : model.imageBlack,
                     height: 50,
                     width: 50,
                   ),
                 ),
                 const SizedBox(),
                 Text(
-                  text,
-                  style: Styles.textStyle18
-                      .copyWith(color: onPress ? kwhite : Colors.black),
+                  model.name,
+                  style: Styles.textStyle18.copyWith(
+                    color: onPress ? kwhite : Colors.black,
+                  ),
                 ),
               ],
             ),
