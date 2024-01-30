@@ -10,7 +10,7 @@ class CategoryListView extends StatefulWidget {
 }
 
 class _CategoryListViewState extends State<CategoryListView> {
-  List<bool> check = [false, false, false, false];
+  List<bool> check = [true, false, false, false];
 
   @override
   Widget build(BuildContext context) {
