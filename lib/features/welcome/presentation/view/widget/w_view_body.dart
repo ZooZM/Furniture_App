@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 import 'package:furniture_app/features/Home/presentation/view/home_view.dart';
-import 'package:furniture_app/features/welcome/data/constant/constant.dart';
+import 'package:furniture_app/features/welcome/data/path.dart';
 import 'package:furniture_app/features/welcome/presentation/view/widget/w_icon.dart';
+import 'package:furniture_app/features/welcome/presentation/view/widget/w_view_model.dart';
 
 class WViewBody extends StatefulWidget {
   const WViewBody({super.key});
@@ -49,65 +50,23 @@ class _WViewBodyState extends State<WViewBody> {
           Expanded(
             child: PageView.builder(
               controller: _controller,
-              itemCount: onboardingPagedList.length,
+              itemCount: onBoardList.length,
               onPageChanged: (int index) {
                 setState(() {
                   currentIndex = index;
                 });
               },
               itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    AspectRatio(
-                      aspectRatio: 1.16,
-                      child: Image.asset(onboardingPagedList[index].image),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 12,
-                      ),
-                      child: Text(
-                        onboardingPagedList[index].title,
-                        style: Styles.textStyle30,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ...List.generate(
-                          onboardingPagedList.length,
-                          (index) => AnimatedContainer(
-                            margin: const EdgeInsets.only(right: 5),
-                            duration: const Duration(
-                              milliseconds: 600,
-                            ),
-                            width: currentIndex == index ? 15 : 6,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 26),
-                      child: Text(
-                        onboardingPagedList[index].subtitle,
-                        style: Styles.textStyle16.copyWith(color: Colors.black),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
+                return WViewModel(
+                  currentIndex: currentIndex,
+                  index: index,
                 );
               },
             ),
           ),
           WIcon(
             onTap: () {
-              if (currentIndex == onboardingPagedList.length - 1) {
+              if (currentIndex == onBoardList.length - 1) {
                 Navigator.of(context).pushReplacementNamed(const HomeView().id);
               }
               _controller.nextPage(
@@ -115,9 +74,8 @@ class _WViewBodyState extends State<WViewBody> {
                 curve: Curves.ease,
               );
             },
-            text: currentIndex == onboardingPagedList.length - 1
-                ? "Get Started"
-                : "Next",
+            text:
+                currentIndex == onBoardList.length - 1 ? "Get Started" : "Next",
           ),
         ],
       ),
