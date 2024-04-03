@@ -9,7 +9,6 @@ final onboardingPagedList = [
   WViewModel(
     image: onBoardList[1].image,
     title: onBoardList[1].title,
-    key: null,
     subtitle: onBoardList[1].subtitle,
   ),
   WViewModel(

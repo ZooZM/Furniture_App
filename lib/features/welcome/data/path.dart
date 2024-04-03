@@ -14,7 +14,7 @@ List<WelcomModel> onBoardList = [
   ),
   WelcomModel(
     image: ImageAsset.onboardingImageThree,
-    title: ImageAsset.onboardingImageTwoTitle,
-    subtitle: ImageAsset.onboardingImageTwoSubTitle,
+    title: ImageAsset.onboardingImageThreeTitle,
+    subtitle: ImageAsset.onboardingImageThreeSubTitle,
   ),
 ];

@@ -10,11 +10,11 @@ class ImageAsset {
   static const String table2 = '$assetsPath/table2.png';
   static const String p1 = '$assetsPath/1.png';
   static const String p2 = '$assetsPath/2.png';
-  static const String onboardingImageOne = '$assetsPath/3.png';
+  static const String onboardingImageOne = '$assetsPath/4.png';
   static const String onboardingImageOneTitle = 'Furniture is Art';
   static const String onboardingImageOneSubTitle =
       'buying your own furniture to provide you with ease and comfort.';
-  static const String onboardingImageTwo = '$assetsPath/4.png';
+  static const String onboardingImageTwo = '$assetsPath/3.png';
   static const String onboardingImageTwoTitle = 'Enjoy the modern Furniture';
   static const String onboardingImageTwoSubTitle =
       'Furniture provides a place to relax in your home.';

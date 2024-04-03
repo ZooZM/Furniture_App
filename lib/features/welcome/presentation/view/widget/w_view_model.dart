@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
+import 'package:furniture_app/features/welcome/data/constant/constant.dart';
 
 class WViewModel extends StatelessWidget {
   const WViewModel({
@@ -14,21 +15,18 @@ class WViewModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 26,
-          ),
-          SizedBox(
-            height: 400,
+          AspectRatio(
+            aspectRatio: 1.16,
             child: Image.asset(image),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 28,
+              vertical: 12,
             ),
             child: Text(
               title,
@@ -36,6 +34,26 @@ class WViewModel extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     ...List.generate(
+          //       onboardingPagedList.length,
+          //       (index) => AnimatedContainer(
+          //         margin: const EdgeInsets.only(right: 5),
+          //         duration: const Duration(
+          //           milliseconds: 600,
+          //         ),
+          //         width: 6,
+          //         height: 6,
+          //         decoration: BoxDecoration(
+          //           color: Colors.black,
+          //           borderRadius: BorderRadius.circular(5),
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 26),
             child: Text(

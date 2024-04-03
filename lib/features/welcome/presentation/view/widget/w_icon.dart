@@ -3,14 +3,13 @@ import 'package:furniture_app/constant.dart';
 import 'package:furniture_app/core/utils/Styles.dart';
 
 class WIcon extends StatelessWidget {
-  const WIcon({super.key, this.onTap});
+  const WIcon({super.key, this.onTap, required this.text});
   final void Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        onTap;
-      },
+      onTap: onTap,
       child: Card(
         color: korange,
         child: Padding(
@@ -19,7 +18,7 @@ class WIcon extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Next',
+                text,
                 style: Styles.textStyle16.copyWith(color: Colors.white),
               ),
               const SizedBox(
